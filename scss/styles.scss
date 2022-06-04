@@ -1,3 +1,180 @@
-h2 {
-    color: blueviolet;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* VARS */
+
+$small: 576px;
+$medium: 820px;
+$primary-font: #151515;
+$secundary-font: #717171;
+$bg-grey: #c7c7c787;
+$bg-grey-line: #cecdcd;
+
+/* HEADER */
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+        }
+
+        .nav-link{
+            .nav-btn {
+                border: none;
+                background: none;
+                width: 100px;
+                align-items: center;
+                transition: all 0.2s linear;
+            
+                span {
+                    padding-bottom: 7px;
+                    letter-spacing: 1px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                }
+            }
+            
+            .hover-underline-animation {
+                position: relative;
+                color: black;
+                padding-bottom: 20px;
+            
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #000000;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+            }
+            
+            .nav-btn:hover {
+                transform: translateY(-2px);
+            
+                .hover-underline-animation:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    
+        .cart-link{
+            margin-right: 10px;
+            .btn{
+                width: 100px;
+                height: 40px;
+            
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            
+                @media screen and (max-width: $small) {
+                    width: 100%;
+                }
+            }
+            
+            .btn-danger:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        flex-direction: column;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $bg-grey-line;
+    background-color: $bg-grey;
+
+    .footer-nav{
+        align-self: center;
+        margin-left: 10px;
+    
+        @media screen and (max-width: $small) {
+            width: 100%;
+        }
+    
+        .nav {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+    
+            @media screen and (max-width: $small) {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+    
+            .nav-link {
+                font-size: 14px;
+                padding: 1px;
+                color: $secundary-font;
+    
+                &:hover {
+                    color: #b12b38;
+                }
+            }
+        }
+    }
+    
+    .redes-foot {
+        display: flex;
+        align-self: end;
+    
+        @media screen and (max-width: $small) {
+            width: 100%;
+            justify-content: center;
+        }
+    
+        i {
+            font-size: 20px;
+        }
+    
+        a {
+            color: $primary-font;
+            margin: 10px;
+    
+            &:hover {
+                color: #b12b38;
+            }
+        }
+    }
+    
+    .inf-footer {
+        text-align: center;
+        padding-top: 12px;
+    
+        p {
+            font-size: 12px;
+            color: $secundary-font;
+        }
+    
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $small) {
+        flex-direction: column;
+    }
 }
