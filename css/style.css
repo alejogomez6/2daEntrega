@@ -60,7 +60,7 @@ body {
     width: 75%;
     margin: 40px 0px; }
   .main-inicio .sec-destacados {
-    width: 75%;
+    width: 70%;
     margin: 40px 0px; }
     .main-inicio .sec-destacados .dest-div {
       margin: 20px 10px; }
@@ -68,10 +68,9 @@ body {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
-      grid-column-gap: 10px;
+      grid-column-gap: 30px;
       grid-row-gap: 0px; }
       .main-inicio .sec-destacados .cards-div .card {
-        width: 100%;
         background: white;
         border-radius: 0.4em;
         box-shadow: 0.3em 0.3em 0.7em #00000015;
@@ -91,6 +90,50 @@ body {
     text-align: center; }
     .main-inicio .sec-servicios .serv-item {
       margin: 0px 20px; }
+
+/* PRODUCTOS */
+.box-shadow {
+  border-radius: 10px;
+  background: #e8e8e8;
+  box-shadow: -5px 5px 20px #d1d1d1, 5px -5px 20px #ffffff; }
+
+.main-productos {
+  margin: 0px 50px; }
+  .main-productos .cont-productos {
+    display: flex;
+    flex-direction: row; }
+    .main-productos .cont-productos .filtros-prod {
+      height: fit-content;
+      width: 25%;
+      margin: 50px;
+      padding: 20px 0px; }
+    .main-productos .cont-productos .expositor-prod {
+      width: 80%;
+      margin-top: 50px; }
+      .main-productos .cont-productos .expositor-prod .cards-div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        margin-bottom: 20px; }
+        .main-productos .cont-productos .expositor-prod .cards-div .card {
+          width: 75%;
+          background: white;
+          border-radius: 0.4em;
+          box-shadow: 0.3em 0.3em 0.7em #00000015;
+          transition: border 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          border: #cac9c9 0.1em solid;
+          color: #151515;
+          text-decoration: none; }
+          .main-productos .cont-productos .expositor-prod .cards-div .card:hover {
+            border: #a9a9a9 0.2em solid;
+            color: #b12b38;
+            text-decoration: none; }
+  .main-productos .page-nav {
+    margin: 50px 0px; }
+    .main-productos .page-nav .page-link {
+      color: #2b2b2b; }
+      .main-productos .page-nav .page-link:hover {
+        color: #b12b38; }
 
 /* FOOTER */
 footer {
@@ -129,7 +172,7 @@ footer {
       font-size: 12px;
       color: #717171; }
 
-/* MEDIA MEDIUM */
+/* MEDIA TABLETA */
 @media screen and (max-width: 822px) {
   .header-nav {
     flex-direction: column; }
@@ -148,9 +191,29 @@ footer {
     width: 100%; }
     .main-inicio .sec-servicios .serv-item {
       margin: 0px 5px;
-      font-size: 13px; } }
+      font-size: 13px; }
+  .main-productos .cont-productos {
+    flex-direction: column;
+    align-items: center; }
+    .main-productos .cont-productos .filtros-prod {
+      margin: 10px 0px;
+      padding: 0px;
+      width: fit-content; }
+      .main-productos .cont-productos .filtros-prod .filtros-acordion {
+        display: flex;
+        justify-content: center; }
+    .main-productos .cont-productos .expositor-prod {
+      width: 80%;
+      margin: 0px; }
+      .main-productos .cont-productos .expositor-prod .cards-div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 15px; }
+        .main-productos .cont-productos .expositor-prod .cards-div .card {
+          width: 100%; } }
 
-/* MEDIA SMALL */
+/* MEDIA MOVIL */
 @media screen and (max-width: 576px) {
   .header-nav .nav {
     flex-direction: column; }
@@ -158,15 +221,20 @@ footer {
       width: 105%; }
   .main-inicio .sec-destacados {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 65%; }
     .main-inicio .sec-destacados .cards-div {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
       grid-column-gap: 0px;
-      grid-row-gap: 10px;
-      margin-left: 34px; }
-      .main-inicio .sec-destacados .cards-div .card {
-        width: 90%; }
+      grid-row-gap: 10px; }
+  .main-productos .cont-productos .expositor-prod {
+    width: 80%; }
+    .main-productos .cont-productos .expositor-prod .cards-div {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 10px; }
   footer {
     flex-direction: column;
     height: 100px; }

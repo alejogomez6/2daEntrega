@@ -107,7 +107,7 @@ $grid-breakpoints: (
     }
 
     .sec-destacados {
-        width: 75%;
+        width: 70%;
         margin: $sec-margin;
 
         .dest-div {
@@ -118,11 +118,10 @@ $grid-breakpoints: (
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr;
-            grid-column-gap: 10px;
+            grid-column-gap: 30px;
             grid-row-gap: 0px;
 
             .card {
-                width: 100%;
                 background: rgb(255, 255, 255);
                 border-radius: 0.4em;
                 box-shadow: 0.3em 0.3em 0.7em #00000015;
@@ -150,6 +149,72 @@ $grid-breakpoints: (
 
         .serv-item {
             margin: 0px 20px;
+        }
+    }
+}
+
+/* PRODUCTOS */
+
+.box-shadow {
+    border-radius: 10px;
+    background: #e8e8e8;
+    box-shadow:  -5px 5px 20px #d1d1d1,
+                5px -5px 20px #ffffff;
+}
+
+.main-productos {
+    margin: 0px 50px;
+
+    .cont-productos {
+        display: flex;
+        flex-direction: row;
+
+        .filtros-prod {
+            height: fit-content;
+            width: 25%;
+            margin: 50px;
+            padding: 20px 0px;
+        }
+
+        .expositor-prod {
+            width: 80%;
+            margin-top: 50px;
+
+            .cards-div {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
+                margin-bottom: 20px;
+
+                .card {
+                    width: 75%;
+                    background: rgb(255, 255, 255);
+                    border-radius: 0.4em;
+                    box-shadow: 0.3em 0.3em 0.7em #00000015;
+                    transition: border 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    border: rgb(202, 201, 201) 0.1em solid;
+                    color: $primary-font;
+                    text-decoration: none;
+    
+                    &:hover {
+                        border: #a9a9a9 0.2em solid;
+                        color: $hover-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-nav {
+        margin: 50px 0px;
+
+        .page-link {
+            color: #2b2b2b;
+
+            &:hover {
+                color: #b12b38;
+            }
         }
     }
 }
@@ -214,7 +279,7 @@ footer {
 }
 
 
-/* MEDIA MEDIUM */
+/* MEDIA TABLETA */
 
 @media screen and (max-width: $medium) {
 
@@ -254,9 +319,43 @@ footer {
             }
         }
     }
+
+    .main-productos {
+        .cont-productos {
+            flex-direction: column;
+            align-items: center;
+
+            .filtros-prod {
+                margin: 10px 0px;
+                padding: 0px;
+                width: fit-content;
+
+                .filtros-acordion {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .expositor-prod {
+                width: 80%;
+                margin: 0px;
+
+                .cards-div {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-column-gap: 30px;
+                    grid-row-gap: 15px;
+
+                    .card {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* MEDIA SMALL */
+/* MEDIA MOVIL */
 
 @media screen and (max-width: $small) {
 
@@ -275,26 +374,34 @@ footer {
     }
 
     .main-inicio {
-
         .sec-destacados {
             display: flex;
             flex-direction: column;
+            width: 65%;
 
             .cards-div {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(4, 1fr);
                 grid-column-gap: 0px;
                 grid-row-gap: 10px;
-                margin-left: 34px;
 
                 .card{
-                    width: 90%;
                 }
             }
         }
+    }
 
-        .sec-servicios {
-
+    .main-productos {
+        .cont-productos {
+            .expositor-prod {
+                width: 80%;
+                .cards-div {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(4, 1fr);
+                    grid-column-gap: 0px;
+                    grid-row-gap: 10px;
+                }
+            }
         }
     }
 
