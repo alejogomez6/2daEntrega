@@ -1,0 +1,76 @@
+@import "../utilities/variables.scss";
+@import "../utilities/extends.scss";
+
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+
+        .nav-link {
+
+            .nav-btn {
+                border: none;
+                background: none;
+                width: 100px;
+                align-items: center;
+                transition: all 0.2s linear;
+
+                span {
+                    padding-bottom: 7px;
+                    letter-spacing: 1px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .hover-underline-animation {
+                position: relative;
+                color: black;
+                padding-bottom: 20px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1.5px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #000000;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+            }
+
+            .nav-btn:hover {
+                transform: translateY(-2px);
+
+                .hover-underline-animation:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+
+        .cart-link {
+            margin-right: 10px;
+
+            .btn {
+                width: 100px;
+                height: 40px;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+
+            .btn-danger:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

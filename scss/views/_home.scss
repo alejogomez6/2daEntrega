@@ -1,0 +1,60 @@
+@import "../utilities/variables.scss";
+@import "../utilities/extends.scss";
+
+
+.main-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sec-carousel {
+        width: 75%;
+        margin: $sec-margin;
+    }
+
+    .sec-destacados {
+        width: 70%;
+        margin: $sec-margin;
+
+        .dest-div {
+            margin: 20px 10px;
+        }
+
+        .cards-div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 0px;
+
+            .card {
+                background: rgb(255, 255, 255);
+                border-radius: 0.4em;
+                box-shadow: 0.3em 0.3em 0.7em #00000015;
+                transition: border 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: rgb(202, 201, 201) 0.1em solid;
+                color: $primary-font;
+                text-decoration: none;
+
+                &:hover {
+                    border: #a9a9a9 0.2em solid;
+                    color: $hover-color;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    .sec-servicios {
+        width: 50%;
+        margin: $sec-margin;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .serv-item {
+            margin: 0px 20px;
+        }
+    }
+}

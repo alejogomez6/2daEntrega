@@ -1,0 +1,60 @@
+@import "../utilities/variables.scss";
+@import "../utilities/extends.scss";
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $bg-grey-line;
+    background-color: $bg-grey;
+
+    .footer-nav {
+        align-self: center;
+        margin-left: 10px;
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            .nav-link {
+                font-size: 14px;
+                padding: 1px;
+                color: $secundary-font;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+
+    .redes-foot {
+        display: flex;
+        align-self: end;
+
+        i {
+            font-size: 20px;
+        }
+
+        a {
+            color: $primary-font;
+            margin: 10px;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+
+    .inf-footer {
+        text-align: center;
+        padding-top: 12px;
+
+        p {
+            font-size: 12px;
+            color: $secundary-font;
+        }
+    }
+}
