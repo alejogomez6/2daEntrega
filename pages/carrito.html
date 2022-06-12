@@ -19,7 +19,7 @@
 <body>
     <header>
         <nav class="navbar header-nav">
-            <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" alt="logo mafalda"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.webp" alt="logo mafalda"></a>
             <div class="nav nav-pills">
                 <a class="nav-link" href="productos.html">
                     <button class="nav-btn">
@@ -45,11 +45,102 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-cart">
+        <section class="shopping-cart">
+            <div class="shopping-header">
+                <h1>Carrito</h1>
+                <h2>Borrar todo</h2>
+            </div>
+            <div class="shopping-item">
+                <div class="item-product">
+                    <div>
+                        <img src="../assets/img/producto-a.webp" />
+                    </div>
+                    <div class="item-title">
+                        <p>Producto</p>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-counter btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">-1</button>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="1"
+                            aria-label="Disabled input example" disabled readonly>
+                        <button type="button" class="btn btn-secondary">+1</button>
+                    </div>
+                    <div class="item-sidecounter">
+                        <div class="amount">$2.99</div>
+                        <div class="remove"><u>Remover</u></div>
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-item">
+                <div class="item-product">
+                    <div>
+                        <img src="../assets/img/producto-a.webp" />
+                    </div>
+                    <div class="item-title">
+                        <p>Producto</p>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-counter btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">-1</button>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="1"
+                            aria-label="Disabled input example" disabled readonly>
+                        <button type="button" class="btn btn-secondary">+1</button>
+                    </div>
+                    <div class="item-sidecounter">
+                        <div class="amount">$2.99</div>
+                        <div class="remove"><u>Remover</u></div>
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-item">
+                <div class="item-product">
+                    <div>
+                        <img src="../assets/img/producto-a.webp" />
+                    </div>
+                    <div class="item-title">
+                        <p>Producto</p>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-counter btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">-1</button>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="1"
+                            aria-label="Disabled input example" disabled readonly>
+                        <button type="button" class="btn btn-secondary">+1</button>
+                    </div>
+                    <div class="item-sidecounter">
+                        <div class="amount">$2.99</div>
+                        <div class="remove"><u>Remover</u></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price-cart">
+            <div class="total-price">
+                <div class="total-left">
+                    <p>Productos =</p>
+                    <p>Impuestos =</p>
+                    <p>Envio =</p>
+                    <p><strong>Total =</strong></p>
+                </div>
+                <div class="total-right">
+                    <p>$ 8,97</p>
+                    <p>$ 5,00</p>
+                    <p>$ 5,00</p>
+                    <p><strong>$ 18,97</strong></p>
+                </div>
+            </div>
+            <div class="button-price">
+                <button type="button" class="btn btn-danger">PAGAR</button>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-nav">
+        <nav class="footer-nav">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Inicio</a>
@@ -61,7 +152,7 @@
                     <a class="nav-link" href="faq.html">Preguntas frecuentes</a>
                 </li>
             </ul>
-        </div>
+        </nav>
         <div class="redes-foot">
             <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
             <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></i></a>

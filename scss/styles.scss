@@ -1,9 +1,27 @@
+
+/* TIPOGRAFIAS */
 @import "base/typo";
+
+/* HEADER */
 @import "layout/header";
+
+/* FOOTER */
 @import "layout/footer";
-@import "layout/media";
+
+/* HOME */
 @import "views/home";
+
+/* PRODUCTOS */
 @import "views/productos";
+
+/* CONTACTO */
 @import "views/contacto";
+
+/* PREGUNTAS FRECUENTES */
 @import "views/faq";
+
+/* CARRITO */
 @import "views/cart";
+
+/* MEDIA QUARIES */
+@import "layout/media";

@@ -1,2 +1,113 @@
 @import "../utilities/variables.scss";
 @import "../utilities/extends.scss";
+@import "../utilities/mixin";
+
+.main-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: $sec-margin;
+
+    .shopping-cart{
+        @extend %box-shadow;
+        width: 50%;
+        padding: 1.5%;
+
+        .shopping-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1{
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            h2{
+                font-size: 15px;
+                color: #b12b38;
+                cursor: pointer;
+            }
+        }
+
+        .shopping-item{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem 0rem;
+            margin-top: 1.875rem;
+            background-color: #c7c7c737;
+            border-radius: 1%;
+
+            .item-product{
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                img{
+                    width: 6rem;
+                }
+    
+                .item-title{
+                    font-size: 1rem;
+                }
+            }
+
+            .item-price{
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .item-counter{
+                    button{
+                        padding: 0px;
+                        font-size: .8rem;
+                        width: 1.8rem;
+                    }
+    
+                    input{
+                        width: 1.875rem;
+                    }
+                }
+    
+                .item-sidecounter{
+                    text-align: center;
+    
+                    .amount{
+                        color: $primary-font;
+                    }
+    
+                    .remove{
+                        color: $hover-color;
+                        font-size: .875rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-cart{
+        @extend %box-shadow;
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        padding: 2%;
+        height: 100%;
+
+        .total-price{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-price{
+            display: flex;
+            justify-content: center;
+            button{
+                width: fit-content;
+            }
+        }
+    }
+}
