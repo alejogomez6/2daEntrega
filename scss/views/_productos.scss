@@ -1,30 +1,29 @@
 @import "../utilities/variables.scss";
 @import "../utilities/extends.scss";
+@import "../utilities/mixin";
 
 .main-productos {
-    margin: 0px 50px;
-
     .cont-productos {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
 
         .filtros-prod {
             @extend %box-shadow;
             height: fit-content;
-            width: 25%;
-            margin: 50px;
-            padding: 20px 0px;
+            width: 20%;
+            margin: $sec-margin;
+            padding: 1.25rem 0rem;
         }
 
         .expositor-prod {
-            width: 80%;
-            margin-top: 50px;
+            width: 70%;
+            margin: $sec-margin;
 
             .cards-div {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: 1fr;
-                margin-bottom: 20px;
+                @include grid(repeat(4, 1fr),1fr,0rem,0rem);
+                margin-bottom: 1.25rem;
 
                 .card {
                     width: 75%;
@@ -47,7 +46,7 @@
     }
 
     .page-nav {
-        margin: 50px 0px;
+        margin: 3.125rem 0rem;
 
         .page-link {
             color: #2b2b2b;

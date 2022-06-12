@@ -1,2 +1,48 @@
 @import "../utilities/variables.scss";
 @import "../utilities/extends.scss";
+@import "../utilities/mixin";
+
+.main-faq{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: $sec-margin;
+
+    .sec-respuestas{
+        @extend %box-shadow;
+        width: 50%;
+        padding: 1.25rem 3.125rem;
+
+        .text-respuestas{
+            text-align: center;
+            margin: 1rem;
+
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+
+        .accordion-respuestas{
+            padding: 1rem;
+        }
+    }
+
+    .sec-preguntas{
+        @extend %box-shadow;
+        width: 25%;
+        text-align: end;
+        padding: 1.875rem 1.25rem;
+        height: 100%;
+        line-height: 1.875rem;
+
+        a{
+            font-size: .9375rem;
+            color: $primary-font;
+            text-decoration: none;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+}

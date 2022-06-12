@@ -1,5 +1,6 @@
 @import "../utilities/variables.scss";
 @import "../utilities/extends.scss";
+@import "../utilities/mixin";
 
 
 .main-inicio {
@@ -22,10 +23,7 @@
 
         .cards-div {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr;
-            grid-column-gap: 30px;
-            grid-row-gap: 0px;
+            @include grid(repeat(4, 1fr),1fr,1.875rem,0px);
 
             .card {
                 background: rgb(255, 255, 255);
