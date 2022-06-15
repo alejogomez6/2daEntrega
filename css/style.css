@@ -187,6 +187,10 @@ footer .inf-footer p {
   margin: 0px 20px;
 }
 
+.disclaimer {
+  display: none !important;
+}
+
 /* PRODUCTOS */
 .main-cart .price-cart, .main-cart .shopping-cart, .main-faq .sec-preguntas, .main-faq .sec-respuestas, .main-contacto .sec-map, .main-contacto .sec-nosotros, .main-productos .cont-productos .filtros-prod {
   border-radius: 10px;
@@ -600,7 +604,7 @@ footer .inf-footer p {
     height: 100px;
   }
   footer .footer-nav {
-    width: 100%;
+    width: 95%;
     margin-top: 10px;
   }
   footer .footer-nav .nav {
