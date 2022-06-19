@@ -29,7 +29,7 @@ body {
 .header-nav .nav .nav-link .nav-btn {
   border: none;
   background: none;
-  width: 100px;
+  width: 100%;
   align-items: center;
   transition: all 0.2s linear;
 }
@@ -568,10 +568,13 @@ footer .inf-footer p {
 @media screen and (max-width: 576px) {
   .header-nav .nav {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+  }
+  .header-nav .nav .nav-link {
+    width: 100%;
   }
   .header-nav .nav .cart-link {
-    margin: 0px;
+    margin-right: 0rem;
     width: 100%;
   }
   .header-nav .nav .cart-link .btn {
