@@ -89,8 +89,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 1px solid #cecdcd;
-  background-color: rgba(199, 199, 199, 0.5294117647);
+  border-top: 1px solid rgba(206, 205, 205, 0.2274509804);
+  background-color: rgba(199, 199, 199, 0.2352941176);
 }
 footer .footer-nav {
   align-self: center;
@@ -153,13 +153,16 @@ footer .inf-footer p {
   margin: 3.125rem 0rem;
 }
 .main-inicio .sec-destacados .dest-div {
-  margin: 20px 10px;
+  margin: 30px 0px;
+}
+.main-inicio .sec-destacados .dest-div h1 {
+  font-size: 32px;
 }
 .main-inicio .sec-destacados .cards-div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 1.875rem;
+  grid-column-gap: 40px;
   grid-row-gap: 0px;
 }
 .main-inicio .sec-destacados .cards-div .card {
@@ -170,6 +173,7 @@ footer .inf-footer p {
   border: rgb(202, 201, 201) 0.1em solid;
   color: #151515;
   text-decoration: none;
+  width: 95%;
 }
 .main-inicio .sec-destacados .cards-div .card:hover {
   border: #a9a9a9 0.2em solid;
@@ -466,6 +470,9 @@ footer .inf-footer p {
   .header-nav {
     flex-direction: column;
   }
+  .header-nav .navbar-brand {
+    margin: 0px;
+  }
   .main-inicio .sec-carousel {
     width: 100%;
   }
@@ -480,6 +487,9 @@ footer .inf-footer p {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 10px;
+  }
+  .main-inicio .sec-destacados .cards-div .card {
+    width: 100%;
   }
   .main-inicio .sec-servicios {
     width: 100%;
@@ -558,9 +568,14 @@ footer .inf-footer p {
 @media screen and (max-width: 576px) {
   .header-nav .nav {
     flex-direction: column;
+    align-items: center;
+  }
+  .header-nav .nav .cart-link {
+    margin: 0px;
+    width: 100%;
   }
   .header-nav .nav .cart-link .btn {
-    width: 105%;
+    width: 100%;
   }
   .main-inicio .sec-destacados {
     display: flex;
@@ -573,6 +588,12 @@ footer .inf-footer p {
     grid-column-gap: 0px;
     grid-row-gap: 20px;
   }
+  .main-productos .cont-productos .accordion-item {
+    font-size: 14px;
+  }
+  .main-productos .cont-productos .accordion-item button {
+    font-size: 14px;
+  }
   .main-productos .cont-productos .expositor-prod {
     width: 60%;
   }
@@ -581,6 +602,12 @@ footer .inf-footer p {
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 20px;
+  }
+  .main-contacto .sec-nosotros {
+    width: 90%;
+  }
+  .main-contacto .sec-map iframe {
+    height: 15.625rem;
   }
   .main-cart .shopping-cart {
     padding: 1.25rem;
@@ -597,6 +624,7 @@ footer .inf-footer p {
     width: 60%;
   }
   .main-cart .price-cart {
+    width: 90%;
     padding: 4%;
   }
   footer {

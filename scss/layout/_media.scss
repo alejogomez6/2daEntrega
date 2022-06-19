@@ -9,6 +9,10 @@
 
     .header-nav {
         flex-direction: column;
+
+        .navbar-brand {
+            margin: 0px;
+        }
     }
 
     .main-inicio {
@@ -28,6 +32,10 @@
 
             .cards-div {
                 @include grid(repeat(2, 1fr),repeat(2, 1fr),50px,10px);
+
+                .card{
+                    width: 100%;
+                }
             }
         }
 
@@ -128,18 +136,20 @@
 @media screen and (max-width: $small) {
 
     .header-nav {
-
         .nav {
             flex-direction: column;
+            align-items: center;
 
             .cart-link {
+                margin: 0px;
+                width: 100%;
 
                 .btn {
-                    width: 105%;
+                    width: 100%;
                 }
             }
+            }
         }
-    }
 
     .main-inicio {
         .sec-destacados {
@@ -155,11 +165,32 @@
 
     .main-productos {
         .cont-productos {
+            .accordion-item{
+                font-size: 14px;
+
+                button{
+                    font-size: 14px;
+                }
+            }
+
             .expositor-prod {
                 width: 60%;
                 .cards-div {
                     @include grid(1fr,repeat(4, 1fr),0px,20px);
                 }
+            }
+        }
+    }
+
+    .main-contacto {
+        .sec-nosotros {
+            width: 90%;
+        }
+
+        .sec-map {
+
+            iframe{
+                height: 15.625rem;
             }
         }
     }
@@ -184,6 +215,7 @@
         }
 
         .price-cart {
+            width: 90%;
             padding: 4%;
         }
     }
